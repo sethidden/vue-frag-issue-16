@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <MyInput :visible="toggler" />
     <div v-if="toggler" />
   </div>
@@ -21,18 +20,7 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {this.toggler = !this.toggler;}, 100)
+    setInterval(() => {this.toggler = !this.toggler;}, 500)
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
