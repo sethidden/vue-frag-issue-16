@@ -1,23 +1,15 @@
 <template>
-<MyInputContainer v-if="visible" data-id153="i-am-myinput-root">
-    <template #label>
-      <div>
-        I'm a label
-      </div>
-    </template>
+<div v-frag v-if="visible" data-id153="i-am-myinput-root">
     <div>
       I'm an input
     </div>
-    <div v-if="true">
-      I'm an error message
-    </div>
-  </MyInputContainer>
+  </div>
 </template>
 
 <script>
-import MyInputContainer from './MyInputContainer.vue'
+import frag from 'vue-frag'
 export default {
-  components: { MyInputContainer }, props: ['visible']}
+  props: ['visible'], directives: {frag}}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
