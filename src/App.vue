@@ -1,17 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MyInput :visible="toggler2" />
+    <MyInput :visible="toggler2" />
+    <MyInput :visible="toggler" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import frag from 'vue-frag'
+import MyInput from './MyInput.vue'
 export default {
+  components: { MyInput },
   name: 'App',
-  components: {
-    HelloWorld
+  directives: {
+    frag 
+  },
+  data() {
+    return {
+      toggler: false,
+      toggler2: true,
+    }
+  },
+  mounted() {
+    setInterval(() => {this.toggler = !this.toggler; this.toggler2 = !this.toggler2}, 1)
   }
 }
 </script>
