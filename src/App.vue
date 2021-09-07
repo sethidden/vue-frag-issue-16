@@ -2,7 +2,7 @@
   <div id="app">
     <div v-if="toggler" />
     <MyInput :visible="toggler" />
-    <MyInput :visible="toggler" />
+    <MyInput :visible="toggler2" />
   </div>
 </template>
 
@@ -18,10 +18,12 @@ export default {
   data() {
     return {
       toggler: false,
+      toggler2: false,
     }
   },
   mounted() {
     setInterval(() => {this.toggler = !this.toggler;}, 500)
+    setInterval(() => {this.toggler2 = !this.toggler2;}, 250)
   }
 }
 </script>
