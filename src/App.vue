@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <MyInput :visible="toggler" />
     <div v-if="toggler" />
+    <MyInput :visible="toggler" />
+    <MyInput :visible="toggler" />
   </div>
 </template>
 
